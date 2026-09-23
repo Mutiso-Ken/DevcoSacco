@@ -5,6 +5,7 @@
         "C:/Windows//Microsoft.NET/Framework64",
 
         "./.NET Assembly \"Microsoft.Dynamics.Nav.OpenXml\""
-    ]
+    ],
+    "al.showHomeAtStartup": "Always"
     
 }

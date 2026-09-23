@@ -1,6 +1,7 @@
 report 50026 StatementProfitorloss
 {
     UsageCategory = ReportsAndAnalysis;
+    Caption = 'STATEMENT OF COMPREHENSIVE INCOME';
     ApplicationArea = All;
     DefaultLayout = RDLC;
     RDLCLayout = './Layout/Statementoflossorloss.rdlc';
@@ -289,22 +290,20 @@ report 50026 StatementProfitorloss
 
                     until GLAccount.Next = 0;
                 end;
-
-                //Interest Exepenses
-                InterestExpenses := 0;
+                MemberDeposits := 0;
                 GLAccount.Reset;
-                GLAccount.SetFilter(GLAccount.Incomes, '%1', GLAccount.Incomes::InterestExpenses);
+                GLAccount.SetFilter(GLAccount.MkopoLiabilities, '%1', GLAccount.MkopoLiabilities::MemberDeposits);
                 if GLAccount.FindSet then begin
                     repeat
                         GLEntry.Reset;
                         GLEntry.SetRange(GLEntry."G/L Account No.", GLAccount."No.");
-                        GLEntry.SetFilter(GLEntry."Posting Date", '..%1', ThisYear);
+                        GLEntry.SetFilter(GLEntry."Posting Date", '<=%1', EndofLastyear);
                         if GLEntry.FindSet then begin
                             GLEntry.CalcSums(Amount);
-                            InterestExpenses += -1 * GLEntry.Amount;
+                            MemberDeposits += -1 * GLEntry.Amount;
                         end;
-
                     until GLAccount.Next = 0;
+
                 end;
 
                 LInterestExpenses := 0;
@@ -526,7 +525,7 @@ report 50026 StatementProfitorloss
                         GLEntry.SetFilter(GLEntry."Posting Date", '..%1', ThisYear);
                         if GLEntry.FindSet then begin
                             GLEntry.CalcSums(Amount);
-                            FinancialExpense += -1 * GLEntry.Amount;
+                            FinancialExpense += GLEntry.Amount;
                         end;
 
                     until GLAccount.Next = 0;
@@ -681,11 +680,20 @@ report 50026 StatementProfitorloss
                     until GLAccount.Next = 0;
                 end;
 
+                Depositsonly := 0;
+                GLAccount.Reset;
+                GLAccount.SetRange(GLAccount."No.", '15301');
+                GLAccount.SetFilter(GLAccount."Date Filter", '<=%1', Asat);
+                if GLAccount.FindSet then begin
+                    GLAccount.CalcFields(GLAccount."Net Change");
+                    Depositsonly := -1 * (Depositsonly + GLAccount."Net Change");
+                end;
                 //End Of Retained Earnings
-                TransfertoStatury := RetainedEarnings * 0.2;
-                LTransfertoStatury := LRetainedEarnings * 0.2;
 
-
+                InterestExpenses := 0;
+                SaccoGen.get;
+                InterestExpenses := -((Depositsonly * SaccoGen."Interest On Current Shares") * 0.01);
+                IncomeTaxExpense := -(((InvestmentIncome * 0.50) * 0.30));
                 //End of Transfer to Statutory
 
                 //Net Surplus Before Tax
@@ -693,6 +701,8 @@ report 50026 StatementProfitorloss
                 + Governanceexpenses + administrativeexpenses + PersonalExpenses + OperatingExpenses + FinancialExpense + Makertingexpenses + DepreciationAmmortisation;
                 LprofitorLossbeforetax := LInterestonLoans + LInterestExpenses + LOtherOperatingincome + LInvestmentIncome
            + LGovernanceexpenses + Ladministrativeexpenses + LPersonalExpenses + LOperatingExpenses + LFinancialExpense + LMakertingexpenses + LDepreciationAmmortisation;
+                TransfertoStatury := -((profitorLossbeforetax + IncomeTaxExpense) * 0.2);
+                // LTransfertoStatury := LRetainedEarnings * 0.2;
                 //Net Tax Before Tax
             end;
 
@@ -731,7 +741,9 @@ report 50026 StatementProfitorloss
         }
     }
     var
+        Depositsonly: Decimal;
         TransfertoStatury: Decimal;
+        SaccoGen: Record "Sacco General Set-Up";
         LTransfertoStatury: Decimal;
         RetainedEarnings: Decimal;
         LRetainedEarnings: Decimal;
@@ -775,7 +787,7 @@ report 50026 StatementProfitorloss
         IncomeTaxExpense: Decimal;
         OthercomprehensiveIncome: Decimal;
 
-
+        MemberDeposits: Decimal;
         //Last Year
         LInterestonLoans: Decimal;
         LInvestmentIncome: Decimal;

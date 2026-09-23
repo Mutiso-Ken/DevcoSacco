@@ -393,7 +393,7 @@ Page 50311 "Payroll Employee List."
                     PayrollEmp.Reset;
                     PayrollEmp.SetRange(PayrollEmp."No.", Rec."No.");
                     if PayrollEmp.FindFirst then begin
-                        Report.Run(50010, true, false, PayrollEmp);
+                        Report.Run(Report::"Payroll Payslip", true, false, PayrollEmp);
                     end;
                 end;
             }

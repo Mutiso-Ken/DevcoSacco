@@ -100,6 +100,7 @@ page 50310 "Payroll Employee Card."
                 {
                     ApplicationArea = All;
                     ShowMandatory = true;
+                    Caption = 'SHA No.';
                 }
                 field("PIN No"; Rec."PIN No")
                 {
@@ -170,6 +171,7 @@ page 50310 "Payroll Employee Card."
                 field("Pays NHIF"; Rec."Pays NHIF")
                 {
                     ApplicationArea = All;
+                    Caption = 'Pays NHIF';
                 }
                 field("Payment Mode"; Rec."Payment Mode")
                 {
@@ -278,6 +280,7 @@ page 50310 "Payroll Employee Card."
                 field("Cummulative NHIF"; Rec."Cummulative NHIF")
                 {
                     ApplicationArea = All;
+                    Caption = 'Cummulative NHIF';
                 }
             }
             group("Suspension of Payment")
@@ -480,7 +483,7 @@ page 50310 "Payroll Employee Card."
                     PayrollEmp.Reset;
                     PayrollEmp.SetRange(PayrollEmp."No.", Rec."No.");
                     if PayrollEmp.FindFirst then begin
-                        REPORT.Run(50010, true, false, PayrollEmp);
+                        REPORT.Run(Report::"Payroll Payslip", true, false, PayrollEmp);
                     end;
                 end;
             }

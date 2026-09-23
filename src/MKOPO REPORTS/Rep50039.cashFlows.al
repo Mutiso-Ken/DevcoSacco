@@ -14,6 +14,8 @@ report 50039 cashFlows
             {
 
             }
+            column(PaymentstoempAndsupp;PaymentstoempAndsupp){}
+            column(LPaymentstoempandsupp;LPaymentstoempandsupp){}
             column(Cashatbank; Cashatbank) { }
             column(LCashatbank; LCashatbank) { }
             column(endCashatbank; endCashatbank) { }
@@ -619,7 +621,42 @@ report 50039 cashFlows
 
                         end;
                     until GLAccount.Next = 0;
+                end;
 
+
+
+
+                PaymentstoempAndsupp := 0;
+                GLAccount.Reset;
+                GLAccount.SetFilter(GLAccount."Cash flows", '%1', GLAccount."Cash flows"::"payments to Emp and Supp");
+                if GLAccount.FindSet then begin
+                    repeat
+                        GLEntry.Reset;
+                        GLEntry.SetRange(GLEntry."G/L Account No.", GLAccount."No.");
+                        GLEntry.SetFilter(GLEntry."Posting Date", '..%1', EndofLastyear);
+                        if GLEntry.FindSet then begin
+                            GLEntry.CalcSums(Amount);
+                            PaymentstoempAndsupp += GLEntry.Amount;
+
+                        end;
+                    until GLAccount.Next = 0;
+                end;
+
+
+                LPaymentstoempAndsupp := 0;
+                GLAccount.Reset;
+                GLAccount.SetFilter(GLAccount."Cash flows", '%1', GLAccount."Cash flows"::"payments to Emp and Supp");
+                if GLAccount.FindSet then begin
+                    repeat
+                        GLEntry.Reset;
+                        GLEntry.SetRange(GLEntry."G/L Account No.", GLAccount."No.");
+                        GLEntry.SetFilter(GLEntry."Posting Date", '..%1', EndofLastyear);
+                        if GLEntry.FindSet then begin
+                            GLEntry.CalcSums(Amount);
+                            LPaymentstoempAndsupp += GLEntry.Amount;
+
+                        end;
+                    until GLAccount.Next = 0;
                 end;
             end;
         }
@@ -658,6 +695,8 @@ report 50039 cashFlows
 
 
     var
+        PaymentstoempAndsupp: Decimal;
+        LPaymentstoempandsupp: Decimal;
         Cashatbank: Decimal;
         LCashatbank: Decimal;
 

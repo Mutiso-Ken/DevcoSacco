@@ -1912,14 +1912,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Placement">
+                        <Textbox Name="Investmentincompanies2">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Placement.Value</Value>
+                                  <Value>=Fields!Investmentincompanies.Value</Value>
                                   <Style>
                                     <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
@@ -1928,7 +1928,7 @@
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Placement</rd:DefaultName>
+                          <rd:DefaultName>Investmentincompanies</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -2407,14 +2407,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Investmentincompanies">
+                        <Textbox Name="EquityInvestments2">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Investmentincompanies.Value</Value>
+                                  <Value>=Fields!EquityInvestments.Value</Value>
                                   <Style>
                                     <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
@@ -2423,7 +2423,7 @@
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Investmentincompanies</rd:DefaultName>
+                          <rd:DefaultName>EquityInvestments</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>

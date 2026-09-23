@@ -3185,7 +3185,6 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -4211,6 +4210,12 @@ End Function
         <Field Name="PreviousYear">
           <DataField>PreviousYear</DataField>
         </Field>
+        <Field Name="CurrentHonoraria">
+          <DataField>CurrentHonoraria</DataField>
+        </Field>
+        <Field Name="CurrentHonorariaFormat">
+          <DataField>CurrentHonorariaFormat</DataField>
+        </Field>
         <Field Name="EndofLastyear">
           <DataField>EndofLastyear</DataField>
         </Field>
@@ -4219,6 +4224,12 @@ End Function
         </Field>
         <Field Name="CommercialPapersFormat">
           <DataField>CommercialPapersFormat</DataField>
+        </Field>
+        <Field Name="CurrentYearDividends">
+          <DataField>CurrentYearDividends</DataField>
+        </Field>
+        <Field Name="CurrentYearDividendsFormat">
+          <DataField>CurrentYearDividendsFormat</DataField>
         </Field>
         <Field Name="CollectiveInvestment">
           <DataField>CollectiveInvestment</DataField>

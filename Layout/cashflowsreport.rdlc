@@ -1061,7 +1061,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!InterestonLoans.Value+Fields!InterestonMemberdeposits.Value+Fields!OtherOperatingincome.Value</Value>
+                                  <Value />
                                   <Style>
                                     <FontStyle>Normal</FontStyle>
                                     <FontFamily>Times New Roman</FontFamily>
@@ -1140,7 +1140,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!LInterestonLoans.Value+Fields!LInterestonMemberdeposits.Value+Fields!LOtherOperatingincome.Value</Value>
+                                  <Value />
                                   <Style>
                                     <FontStyle>Normal</FontStyle>
                                     <FontFamily>Times New Roman</FontFamily>
@@ -2442,7 +2442,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!InterestonMemberdeposits.Value</Value>
+                                  <Value />
                                   <Style>
                                     <FontStyle>Normal</FontStyle>
                                     <FontFamily>Times New Roman</FontFamily>
@@ -2516,7 +2516,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!LInterestonMemberDeposits.Value</Value>
+                                  <Value />
                                   <Style>
                                     <FontStyle>Normal</FontStyle>
                                     <FontFamily>Times New Roman</FontFamily>
@@ -6231,6 +6231,18 @@ End Function
       <Fields>
         <Field Name="Code">
           <DataField>Code</DataField>
+        </Field>
+        <Field Name="PaymentstoempAndsupp">
+          <DataField>PaymentstoempAndsupp</DataField>
+        </Field>
+        <Field Name="PaymentstoempAndsuppFormat">
+          <DataField>PaymentstoempAndsuppFormat</DataField>
+        </Field>
+        <Field Name="LPaymentstoempandsupp">
+          <DataField>LPaymentstoempandsupp</DataField>
+        </Field>
+        <Field Name="LPaymentstoempandsuppFormat">
+          <DataField>LPaymentstoempandsuppFormat</DataField>
         </Field>
         <Field Name="Cashatbank">
           <DataField>Cashatbank</DataField>

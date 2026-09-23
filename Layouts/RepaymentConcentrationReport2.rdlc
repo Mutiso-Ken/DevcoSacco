@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="No_">
+          <DataField>No_</DataField>
+        </Field>
+        <Field Name="Loan__No_">
+          <DataField>Loan__No_</DataField>
+        </Field>
+        <Field Name="Issued_Date">
+          <DataField>Issued_Date</DataField>
+        </Field>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+        </Field>
+        <Field Name="OpeningBal">
+          <DataField>OpeningBal</DataField>
+        </Field>
+        <Field Name="OpeningBalFormat">
+          <DataField>OpeningBalFormat</DataField>
+        </Field>
+        <Field Name="Approved_Amount">
+          <DataField>Approved_Amount</DataField>
+        </Field>
+        <Field Name="Approved_AmountFormat">
+          <DataField>Approved_AmountFormat</DataField>
+        </Field>
+        <Field Name="Repayment">
+          <DataField>Repayment</DataField>
+        </Field>
+        <Field Name="RepaymentFormat">
+          <DataField>RepaymentFormat</DataField>
+        </Field>
+        <Field Name="Loan_Repayment">
+          <DataField>Loan_Repayment</DataField>
+        </Field>
+        <Field Name="Loan_RepaymentFormat">
+          <DataField>Loan_RepaymentFormat</DataField>
+        </Field>
+        <Field Name="jan">
+          <DataField>jan</DataField>
+        </Field>
+        <Field Name="janFormat">
+          <DataField>janFormat</DataField>
+        </Field>
+        <Field Name="feb">
+          <DataField>feb</DataField>
+        </Field>
+        <Field Name="febFormat">
+          <DataField>febFormat</DataField>
+        </Field>
+        <Field Name="mar">
+          <DataField>mar</DataField>
+        </Field>
+        <Field Name="marFormat">
+          <DataField>marFormat</DataField>
+        </Field>
+        <Field Name="apr">
+          <DataField>apr</DataField>
+        </Field>
+        <Field Name="aprFormat">
+          <DataField>aprFormat</DataField>
+        </Field>
+        <Field Name="may">
+          <DataField>may</DataField>
+        </Field>
+        <Field Name="mayFormat">
+          <DataField>mayFormat</DataField>
+        </Field>
+        <Field Name="jun">
+          <DataField>jun</DataField>
+        </Field>
+        <Field Name="junFormat">
+          <DataField>junFormat</DataField>
+        </Field>
+        <Field Name="jul">
+          <DataField>jul</DataField>
+        </Field>
+        <Field Name="julFormat">
+          <DataField>julFormat</DataField>
+        </Field>
+        <Field Name="aug">
+          <DataField>aug</DataField>
+        </Field>
+        <Field Name="augFormat">
+          <DataField>augFormat</DataField>
+        </Field>
+        <Field Name="sep">
+          <DataField>sep</DataField>
+        </Field>
+        <Field Name="sepFormat">
+          <DataField>sepFormat</DataField>
+        </Field>
+        <Field Name="oct">
+          <DataField>oct</DataField>
+        </Field>
+        <Field Name="octFormat">
+          <DataField>octFormat</DataField>
+        </Field>
+        <Field Name="nov">
+          <DataField>nov</DataField>
+        </Field>
+        <Field Name="novFormat">
+          <DataField>novFormat</DataField>
+        </Field>
+        <Field Name="dec">
+          <DataField>dec</DataField>
+        </Field>
+        <Field Name="decFormat">
+          <DataField>decFormat</DataField>
+        </Field>
+        <Field Name="Totals">
+          <DataField>Totals</DataField>
+        </Field>
+        <Field Name="TotalsFormat">
+          <DataField>TotalsFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

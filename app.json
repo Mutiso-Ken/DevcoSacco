@@ -11,7 +11,7 @@
   "url": "",
   "logo": "",
   "dependencies": [],
-  "target": "OnPrem",
+"target": "Cloud",
   "suppressWarnings": ["AL0118","AL0604","AL0132","AL0269","AL0202","AL0603","AL0589","AL0667","AL0432","AL0523","AL0606","AL0600","AL0482"],
   "screenshots": [],
   "platform": "1.0.0.2",
@@ -24,7 +24,7 @@
     {
     
 
-      "from": 1,
+      "from": 50000,
       "to":  51516999
      
     }

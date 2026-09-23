@@ -252,8 +252,6 @@ Report 57004 "Insider Lending & Perf Return"
                     trigger OnPreDataItem()
                     begin
                         "Loans Register".SetFilter("Loans Register"."Issued Date", '<%1', MStartDate);
-                        //"Loans Register".SETFILTER("Loans Register"."Date filter",NEWLoanFilter);
-                        //MESSAGE('Date%1',MStartDate);
                     end;
                 }
                 dataitem(Lregister; "Loans Register")

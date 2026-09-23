@@ -147,6 +147,7 @@ report 50024 FinancialStaticalInformation
                     Cust.SetFilter(Cust."Registration Date", '<=%1', EndofLastyear);
                     if FindSet() then
                         Active := Cust.Count;
+                        
                     Cust.SetFilter(Cust.Status, '=%1', Cust.Status::Dormant);
                     Cust.SetFilter(Cust."Registration Date", '<=%1', EndofLastyear);
                     if FindSet() then

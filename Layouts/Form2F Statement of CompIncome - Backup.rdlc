@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
     <DataSource Name="DataSource">
@@ -11,6 +11,259 @@
       <rd:DataSourceID>fd152336-9930-4258-9a7c-7c110e49a786</rd:DataSourceID>
     </DataSource>
   </DataSources>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+      <Fields>
+        <Field Name="ReportForNavId_1">
+          <DataField>ReportForNavId_1</DataField>
+        </Field>
+        <Field Name="AsAt">
+          <DataField>AsAt</DataField>
+        </Field>
+        <Field Name="Date">
+          <DataField>Date</DataField>
+        </Field>
+        <Field Name="FinancialYear">
+          <DataField>FinancialYear</DataField>
+        </Field>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+        </Field>
+        <Field Name="InterestonLoanPortfolio">
+          <DataField>InterestonLoanPortfolio</DataField>
+        </Field>
+        <Field Name="InterestonLoanPortfolioFormat">
+          <DataField>InterestonLoanPortfolioFormat</DataField>
+        </Field>
+        <Field Name="FeesCommissiononLoanPortfolio">
+          <DataField>FeesCommissiononLoanPortfolio</DataField>
+        </Field>
+        <Field Name="FeesCommissiononLoanPortfolioFormat">
+          <DataField>FeesCommissiononLoanPortfolioFormat</DataField>
+        </Field>
+        <Field Name="GovernmentSecurities">
+          <DataField>GovernmentSecurities</DataField>
+        </Field>
+        <Field Name="GovernmentSecuritiesFormat">
+          <DataField>GovernmentSecuritiesFormat</DataField>
+        </Field>
+        <Field Name="InvestmentinCompaniesshares">
+          <DataField>InvestmentinCompaniesshares</DataField>
+        </Field>
+        <Field Name="InvestmentinCompaniessharesFormat">
+          <DataField>InvestmentinCompaniessharesFormat</DataField>
+        </Field>
+        <Field Name="EquityInvestmentsinsubsidiaries">
+          <DataField>EquityInvestmentsinsubsidiaries</DataField>
+        </Field>
+        <Field Name="EquityInvestmentsinsubsidiariesFormat">
+          <DataField>EquityInvestmentsinsubsidiariesFormat</DataField>
+        </Field>
+        <Field Name="Derivatives">
+          <DataField>Derivatives</DataField>
+        </Field>
+        <Field Name="DerivativesFormat">
+          <DataField>DerivativesFormat</DataField>
+        </Field>
+        <Field Name="CollectiveinvestmentSchemes">
+          <DataField>CollectiveinvestmentSchemes</DataField>
+        </Field>
+        <Field Name="CollectiveinvestmentSchemesFormat">
+          <DataField>CollectiveinvestmentSchemesFormat</DataField>
+        </Field>
+        <Field Name="CommercialPapers">
+          <DataField>CommercialPapers</DataField>
+        </Field>
+        <Field Name="CommercialPapersFormat">
+          <DataField>CommercialPapersFormat</DataField>
+        </Field>
+        <Field Name="PlacementinBanks">
+          <DataField>PlacementinBanks</DataField>
+        </Field>
+        <Field Name="PlacementinBanksFormat">
+          <DataField>PlacementinBanksFormat</DataField>
+        </Field>
+        <Field Name="nterestExpenseonDeposits">
+          <DataField>nterestExpenseonDeposits</DataField>
+        </Field>
+        <Field Name="nterestExpenseonDepositsFormat">
+          <DataField>nterestExpenseonDepositsFormat</DataField>
+        </Field>
+        <Field Name="CostofExternalBorrowings">
+          <DataField>CostofExternalBorrowings</DataField>
+        </Field>
+        <Field Name="CostofExternalBorrowingsFormat">
+          <DataField>CostofExternalBorrowingsFormat</DataField>
+        </Field>
+        <Field Name="DividendExpenses">
+          <DataField>DividendExpenses</DataField>
+        </Field>
+        <Field Name="DividendExpensesFormat">
+          <DataField>DividendExpensesFormat</DataField>
+        </Field>
+        <Field Name="OtherFinancialExpense">
+          <DataField>OtherFinancialExpense</DataField>
+        </Field>
+        <Field Name="OtherFinancialExpenseFormat">
+          <DataField>OtherFinancialExpenseFormat</DataField>
+        </Field>
+        <Field Name="FeesCommissionExpense">
+          <DataField>FeesCommissionExpense</DataField>
+        </Field>
+        <Field Name="FeesCommissionExpenseFormat">
+          <DataField>FeesCommissionExpenseFormat</DataField>
+        </Field>
+        <Field Name="OtherExpense">
+          <DataField>OtherExpense</DataField>
+        </Field>
+        <Field Name="OtherExpenseFormat">
+          <DataField>OtherExpenseFormat</DataField>
+        </Field>
+        <Field Name="ProvisionforLoanLosses">
+          <DataField>ProvisionforLoanLosses</DataField>
+        </Field>
+        <Field Name="ProvisionforLoanLossesFormat">
+          <DataField>ProvisionforLoanLossesFormat</DataField>
+        </Field>
+        <Field Name="ValueofLoansRecovered">
+          <DataField>ValueofLoansRecovered</DataField>
+        </Field>
+        <Field Name="ValueofLoansRecoveredFormat">
+          <DataField>ValueofLoansRecoveredFormat</DataField>
+        </Field>
+        <Field Name="PersonnelExpenses">
+          <DataField>PersonnelExpenses</DataField>
+        </Field>
+        <Field Name="PersonnelExpensesFormat">
+          <DataField>PersonnelExpensesFormat</DataField>
+        </Field>
+        <Field Name="GovernanceExpenses">
+          <DataField>GovernanceExpenses</DataField>
+        </Field>
+        <Field Name="GovernanceExpensesFormat">
+          <DataField>GovernanceExpensesFormat</DataField>
+        </Field>
+        <Field Name="MarketingExpenses">
+          <DataField>MarketingExpenses</DataField>
+        </Field>
+        <Field Name="MarketingExpensesFormat">
+          <DataField>MarketingExpensesFormat</DataField>
+        </Field>
+        <Field Name="DepreciationandAmortizationCharges">
+          <DataField>DepreciationandAmortizationCharges</DataField>
+        </Field>
+        <Field Name="DepreciationandAmortizationChargesFormat">
+          <DataField>DepreciationandAmortizationChargesFormat</DataField>
+        </Field>
+        <Field Name="AdministrativeExpenses">
+          <DataField>AdministrativeExpenses</DataField>
+        </Field>
+        <Field Name="AdministrativeExpensesFormat">
+          <DataField>AdministrativeExpensesFormat</DataField>
+        </Field>
+        <Field Name="NonOperatingIncome">
+          <DataField>NonOperatingIncome</DataField>
+        </Field>
+        <Field Name="NonOperatingIncomeFormat">
+          <DataField>NonOperatingIncomeFormat</DataField>
+        </Field>
+        <Field Name="NonOperatingExpense">
+          <DataField>NonOperatingExpense</DataField>
+        </Field>
+        <Field Name="NonOperatingExpenseFormat">
+          <DataField>NonOperatingExpenseFormat</DataField>
+        </Field>
+        <Field Name="Taxes">
+          <DataField>Taxes</DataField>
+        </Field>
+        <Field Name="TaxesFormat">
+          <DataField>TaxesFormat</DataField>
+        </Field>
+        <Field Name="Donations">
+          <DataField>Donations</DataField>
+        </Field>
+        <Field Name="DonationsFormat">
+          <DataField>DonationsFormat</DataField>
+        </Field>
+        <Field Name="FinancialIncomefromLoansPortfolio">
+          <DataField>FinancialIncomefromLoansPortfolio</DataField>
+        </Field>
+        <Field Name="FinancialIncomefromLoansPortfolioFormat">
+          <DataField>FinancialIncomefromLoansPortfolioFormat</DataField>
+        </Field>
+        <Field Name="FinancialExpense">
+          <DataField>FinancialExpense</DataField>
+        </Field>
+        <Field Name="FinancialExpenseFormat">
+          <DataField>FinancialExpenseFormat</DataField>
+        </Field>
+        <Field Name="NetFinancialIncomeLoss">
+          <DataField>NetFinancialIncomeLoss</DataField>
+        </Field>
+        <Field Name="NetFinancialIncomeLossFormat">
+          <DataField>NetFinancialIncomeLossFormat</DataField>
+        </Field>
+        <Field Name="NetNonOperatingIncomeExpense">
+          <DataField>NetNonOperatingIncomeExpense</DataField>
+        </Field>
+        <Field Name="NetNonOperatingIncomeExpenseFormat">
+          <DataField>NetNonOperatingIncomeExpenseFormat</DataField>
+        </Field>
+        <Field Name="FinancialIncomefromInvestments">
+          <DataField>FinancialIncomefromInvestments</DataField>
+        </Field>
+        <Field Name="FinancialIncomefromInvestmentsFormat">
+          <DataField>FinancialIncomefromInvestmentsFormat</DataField>
+        </Field>
+        <Field Name="AllowanceforLoanLoss">
+          <DataField>AllowanceforLoanLoss</DataField>
+        </Field>
+        <Field Name="AllowanceforLoanLossFormat">
+          <DataField>AllowanceforLoanLossFormat</DataField>
+        </Field>
+        <Field Name="OperatingExpenses">
+          <DataField>OperatingExpenses</DataField>
+        </Field>
+        <Field Name="OperatingExpensesFormat">
+          <DataField>OperatingExpensesFormat</DataField>
+        </Field>
+        <Field Name="NetOperatingIncome">
+          <DataField>NetOperatingIncome</DataField>
+        </Field>
+        <Field Name="NetOperatingIncomeFormat">
+          <DataField>NetOperatingIncomeFormat</DataField>
+        </Field>
+        <Field Name="NetIncomeBeforeTaxesandDonations">
+          <DataField>NetIncomeBeforeTaxesandDonations</DataField>
+        </Field>
+        <Field Name="NetIncomeBeforeTaxesandDonationsFormat">
+          <DataField>NetIncomeBeforeTaxesandDonationsFormat</DataField>
+        </Field>
+        <Field Name="NetIncomeAfterTaxesbeforeDonations">
+          <DataField>NetIncomeAfterTaxesbeforeDonations</DataField>
+        </Field>
+        <Field Name="NetIncomeAfterTaxesbeforeDonationsFormat">
+          <DataField>NetIncomeAfterTaxesbeforeDonationsFormat</DataField>
+        </Field>
+        <Field Name="NetIncomeAfterTaxesandDonations">
+          <DataField>NetIncomeAfterTaxesandDonations</DataField>
+        </Field>
+        <Field Name="NetIncomeAfterTaxesandDonationsFormat">
+          <DataField>NetIncomeAfterTaxesandDonationsFormat</DataField>
+        </Field>
+        <Field Name="FinancialIncome">
+          <DataField>FinancialIncome</DataField>
+        </Field>
+        <Field Name="FinancialIncomeFormat">
+          <DataField>FinancialIncomeFormat</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -41,7 +294,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">FORM 2F</Value>
+                                  <Value>FORM 2F</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -75,7 +328,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -110,7 +363,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">STATEMENT OF COMPREHENSIVE INCOME</Value>
+                                  <Value>STATEMENT OF COMPREHENSIVE INCOME</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -152,7 +405,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">NAME OF SACCO SOCIETY  </Value>
+                                  <Value>NAME OF SACCO SOCIETY  </Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -186,7 +439,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!Name.Value</Value>
+                                  <Value>=Fields!Name.Value</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -225,7 +478,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">SACCO SOCIETY CS NUMBER</Value>
+                                  <Value>SACCO SOCIETY CS NUMBER</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -259,7 +512,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">8246</Value>
+                                  <Value>8246</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -298,7 +551,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">FINANCIAL YEAR </Value>
+                                  <Value>FINANCIAL YEAR </Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -332,7 +585,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!FinancialYear.Value</Value>
+                                  <Value>=Fields!FinancialYear.Value</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -371,7 +624,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">START DATE:</Value>
+                                  <Value>START DATE:</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -405,7 +658,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!Date.Value</Value>
+                                  <Value>=Fields!Date.Value</Value>
                                   <Style>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -446,7 +699,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">END DATE:</Value>
+                                  <Value>END DATE:</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -480,7 +733,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!AsAt.Value</Value>
+                                  <Value>=Fields!AsAt.Value</Value>
                                   <Style>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -521,7 +774,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -553,7 +806,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -585,7 +838,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Year to Date</Value>
+                                  <Value>Year to Date</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -622,7 +875,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Ref No.</Value>
+                                  <Value>Ref No.</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -652,7 +905,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -682,7 +935,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">AMOUNT(KSHS)</Value>
+                                  <Value>AMOUNT(KSHS)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -719,7 +972,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">1</Value>
+                                  <Value>1</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -749,7 +1002,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Financial Income </Value>
+                                  <Value>Financial Income </Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -781,7 +1034,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!FinancialIncome.Value</Value>
+                                  <Value>=Fields!FinancialIncome.Value</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00)</Format>
@@ -819,7 +1072,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">2</Value>
+                                  <Value>2</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -849,7 +1102,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Financial Income from Loans Portfolio</Value>
+                                  <Value>Financial Income from Loans Portfolio</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -881,7 +1134,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!FinancialIncomefromLoansPortfolio.Value</Value>
+                                  <Value>=Fields!FinancialIncomefromLoansPortfolio.Value</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00)</Format>
@@ -919,7 +1172,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">2.1</Value>
+                                  <Value>2.1</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -949,7 +1202,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Interest on Loan Portfolio</Value>
+                                  <Value>Interest on Loan Portfolio</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -979,7 +1232,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!InterestonLoanPortfolio.Value</Value>
+                                  <Value>=Fields!InterestonLoanPortfolio.Value</Value>
                                   <Style>
                                     <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
@@ -1016,7 +1269,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">2.2</Value>
+                                  <Value>2.2</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -1046,7 +1299,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Fees &amp; Commission on Loan Portfolio</Value>
+                                  <Value>Fees &amp; Commission on Loan Portfolio</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -1076,7 +1329,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!FeesCommissiononLoanPortfolio.Value</Value>
+                                  <Value>=Fields!FeesCommissiononLoanPortfolio.Value</Value>
                                   <Style>
                                     <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
@@ -1115,7 +1368,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -1145,7 +1398,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -1175,7 +1428,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -1210,7 +1463,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">3</Value>
+                                  <Value>3</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -1240,7 +1493,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Financial Income from Investments </Value>
+                                  <Value>Financial Income from Investments </Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -1272,7 +1525,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!FinancialIncomefromInvestments.Value</Value>
+                                  <Value>=Fields!FinancialIncomefromInvestments.Value</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00)</Format>
@@ -1310,7 +1563,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">3.1</Value>
+                                  <Value>3.1</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -1340,7 +1593,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Government Securities</Value>
+                                  <Value>Government Securities</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -1370,7 +1623,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!GovernmentSecurities.Value</Value>
+                                  <Value>=Fields!GovernmentSecurities.Value</Value>
                                   <Style>
                                     <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
@@ -1407,7 +1660,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">3.2</Value>
+                                  <Value>3.2</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -1437,7 +1690,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Placement in Banks, Saccos' and similar financial institutions</Value>
+                                  <Value>Placement in Banks, Saccos' and similar financial institutions</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -1467,7 +1720,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!PlacementinBanks.Value</Value>
+                                  <Value>=Fields!PlacementinBanks.Value</Value>
                                   <Style>
                                     <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
@@ -1504,7 +1757,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">3.3</Value>
+                                  <Value>3.3</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -1534,7 +1787,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Commercial Papers, notes and bonds</Value>
+                                  <Value>Commercial Papers, notes and bonds</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -1564,7 +1817,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!CommercialPapers.Value</Value>
+                                  <Value>=Fields!CommercialPapers.Value</Value>
                                   <Style>
                                     <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
@@ -1601,7 +1854,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">3.4</Value>
+                                  <Value>3.4</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -1631,7 +1884,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Collective investment Schemes</Value>
+                                  <Value>Collective investment Schemes</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -1661,7 +1914,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!CollectiveinvestmentSchemes.Value</Value>
+                                  <Value>=Fields!CollectiveinvestmentSchemes.Value</Value>
                                   <Style>
                                     <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
@@ -1698,7 +1951,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">3.5</Value>
+                                  <Value>3.5</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -1728,7 +1981,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Derivatives</Value>
+                                  <Value>Derivatives</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -1758,7 +2011,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!Derivatives.Value</Value>
+                                  <Value>=Fields!Derivatives.Value</Value>
                                   <Style>
                                     <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
@@ -1795,7 +2048,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">3.6</Value>
+                                  <Value>3.6</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -1825,7 +2078,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Equity Investments in subsidiaries and related entities</Value>
+                                  <Value>Equity Investments in subsidiaries and related entities</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -1855,7 +2108,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!EquityInvestmentsinsubsidiaries.Value</Value>
+                                  <Value>=Fields!EquityInvestmentsinsubsidiaries.Value</Value>
                                   <Style>
                                     <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
@@ -1892,7 +2145,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">3.7</Value>
+                                  <Value>3.7</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -1922,7 +2175,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Investment in Companies shares</Value>
+                                  <Value>Investment in Companies shares</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -1952,7 +2205,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!InvestmentinCompaniesshares.Value</Value>
+                                  <Value>=Fields!InvestmentinCompaniesshares.Value</Value>
                                   <Style>
                                     <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
@@ -1989,7 +2242,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -2019,7 +2272,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -2049,7 +2302,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -2084,7 +2337,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">4</Value>
+                                  <Value>4</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -2114,7 +2367,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Financial Expense</Value>
+                                  <Value>Financial Expense</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -2146,7 +2399,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!FinancialExpense.Value</Value>
+                                  <Value>=Fields!FinancialExpense.Value</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00)</Format>
@@ -2184,7 +2437,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">4.1</Value>
+                                  <Value>4.1</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -2214,7 +2467,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Interest Expense on Deposits</Value>
+                                  <Value>Interest Expense on Deposits</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -2244,7 +2497,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!nterestExpenseonDeposits.Value</Value>
+                                  <Value>=Fields!nterestExpenseonDeposits.Value</Value>
                                   <Style>
                                     <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
@@ -2281,7 +2534,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">4.2</Value>
+                                  <Value>4.2</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -2311,7 +2564,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Cost of External Borrowings</Value>
+                                  <Value>Cost of External Borrowings</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -2341,7 +2594,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!CostofExternalBorrowings.Value</Value>
+                                  <Value>=Fields!CostofExternalBorrowings.Value</Value>
                                   <Style>
                                     <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
@@ -2378,7 +2631,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">4.3</Value>
+                                  <Value>4.3</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -2408,7 +2661,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Dividend Expenses (on member shares)</Value>
+                                  <Value>Dividend Expenses (on member shares)</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -2438,7 +2691,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!DividendExpenses.Value</Value>
+                                  <Value>=Fields!DividendExpenses.Value</Value>
                                   <Style>
                                     <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
@@ -2475,7 +2728,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">4.4</Value>
+                                  <Value>4.4</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -2505,7 +2758,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Other Financial Expense</Value>
+                                  <Value>Other Financial Expense</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -2535,7 +2788,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!OtherFinancialExpense.Value</Value>
+                                  <Value>=Fields!OtherFinancialExpense.Value</Value>
                                   <Style>
                                     <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
@@ -2572,7 +2825,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">4.5</Value>
+                                  <Value>4.5</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -2602,7 +2855,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Fees &amp; Commission Expense</Value>
+                                  <Value>Fees &amp; Commission Expense</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -2632,7 +2885,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!FeesCommissionExpense.Value</Value>
+                                  <Value>=Fields!FeesCommissionExpense.Value</Value>
                                   <Style>
                                     <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
@@ -2669,7 +2922,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">4.6</Value>
+                                  <Value>4.6</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -2699,7 +2952,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Other Expense</Value>
+                                  <Value>Other Expense</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -2729,7 +2982,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!OtherExpense.Value</Value>
+                                  <Value>=Fields!OtherExpense.Value</Value>
                                   <Style>
                                     <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
@@ -2766,7 +3019,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">5</Value>
+                                  <Value>5</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -2796,7 +3049,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Net Financial Income/(Loss)</Value>
+                                  <Value>Net Financial Income/(Loss)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -2828,7 +3081,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!NetFinancialIncomeLoss.Value</Value>
+                                  <Value>=Fields!NetFinancialIncomeLoss.Value</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00)</Format>
@@ -2866,7 +3119,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -2896,7 +3149,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -2926,7 +3179,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -2961,7 +3214,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">6</Value>
+                                  <Value>6</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -2991,7 +3244,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Allowance for Loan Loss</Value>
+                                  <Value>Allowance for Loan Loss</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -3023,7 +3276,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!AllowanceforLoanLoss.Value</Value>
+                                  <Value>=Fields!AllowanceforLoanLoss.Value</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00)</Format>
@@ -3061,7 +3314,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">6.1</Value>
+                                  <Value>6.1</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -3091,7 +3344,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Provision for Loan Losses</Value>
+                                  <Value>Provision for Loan Losses</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -3121,7 +3374,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!ProvisionforLoanLosses.Value</Value>
+                                  <Value>=Fields!ProvisionforLoanLosses.Value</Value>
                                   <Style>
                                     <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
@@ -3158,7 +3411,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">6.2</Value>
+                                  <Value>6.2</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -3188,7 +3441,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Value of Loans Recovered</Value>
+                                  <Value>Value of Loans Recovered</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -3218,7 +3471,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!ValueofLoansRecovered.Value</Value>
+                                  <Value>=Fields!ValueofLoansRecovered.Value</Value>
                                   <Style>
                                     <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
@@ -3255,7 +3508,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -3285,7 +3538,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -3315,7 +3568,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -3350,7 +3603,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">7</Value>
+                                  <Value>7</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -3380,7 +3633,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Operating Expenses</Value>
+                                  <Value>Operating Expenses</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -3412,7 +3665,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!OperatingExpenses.Value</Value>
+                                  <Value>=Fields!OperatingExpenses.Value</Value>
                                   <Style>
                                     <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
@@ -3449,7 +3702,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">7.1</Value>
+                                  <Value>7.1</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -3479,7 +3732,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Personnel Expenses</Value>
+                                  <Value>Personnel Expenses</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -3509,7 +3762,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!PersonnelExpenses.Value</Value>
+                                  <Value>=Fields!PersonnelExpenses.Value</Value>
                                   <Style>
                                     <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
@@ -3546,7 +3799,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">7.2</Value>
+                                  <Value>7.2</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -3576,7 +3829,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Governance Expenses</Value>
+                                  <Value>Governance Expenses</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -3606,7 +3859,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!GovernanceExpenses.Value</Value>
+                                  <Value>=Fields!GovernanceExpenses.Value</Value>
                                   <Style>
                                     <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
@@ -3643,7 +3896,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">7.3</Value>
+                                  <Value>7.3</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -3673,7 +3926,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Marketing Expenses</Value>
+                                  <Value>Marketing Expenses</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -3703,7 +3956,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!MarketingExpenses.Value</Value>
+                                  <Value>=Fields!MarketingExpenses.Value</Value>
                                   <Style>
                                     <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
@@ -3740,7 +3993,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">7.4</Value>
+                                  <Value>7.4</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -3770,7 +4023,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Depreciation and Amortization Charges</Value>
+                                  <Value>Depreciation and Amortization Charges</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -3800,7 +4053,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!DepreciationandAmortizationCharges.Value</Value>
+                                  <Value>=Fields!DepreciationandAmortizationCharges.Value</Value>
                                   <Style>
                                     <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
@@ -3837,7 +4090,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">7.6</Value>
+                                  <Value>7.6</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -3867,7 +4120,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Administrative Expenses</Value>
+                                  <Value>Administrative Expenses</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -3897,7 +4150,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!AdministrativeExpenses.Value</Value>
+                                  <Value>=Fields!AdministrativeExpenses.Value</Value>
                                   <Style>
                                     <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
@@ -3934,7 +4187,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -3964,7 +4217,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -3994,7 +4247,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -4029,7 +4282,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">8</Value>
+                                  <Value>8</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -4059,7 +4312,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Net Operating Income</Value>
+                                  <Value>Net Operating Income</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -4091,7 +4344,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!NetOperatingIncome.Value</Value>
+                                  <Value>=Fields!NetOperatingIncome.Value *-1</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00)</Format>
@@ -4113,6 +4366,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -4129,7 +4383,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -4159,7 +4413,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -4189,7 +4443,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -4224,7 +4478,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">9</Value>
+                                  <Value>9</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -4254,7 +4508,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Net Non- Operating Income/ (Expense)</Value>
+                                  <Value>Net Non- Operating Income/ (Expense)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -4286,7 +4540,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!NetNonOperatingIncomeExpense.Value</Value>
+                                  <Value>=Fields!NetNonOperatingIncomeExpense.Value</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00)</Format>
@@ -4324,7 +4578,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">9.1</Value>
+                                  <Value>9.1</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -4354,7 +4608,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Non- Operating Income</Value>
+                                  <Value>Non- Operating Income</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -4384,7 +4638,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!NonOperatingIncome.Value</Value>
+                                  <Value>=Fields!NonOperatingIncome.Value</Value>
                                   <Style>
                                     <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
@@ -4421,7 +4675,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">9.2</Value>
+                                  <Value>9.2</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -4451,7 +4705,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Non- Operating Expense</Value>
+                                  <Value>Non- Operating Expense</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -4481,7 +4735,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!NonOperatingExpense.Value</Value>
+                                  <Value>=Fields!NonOperatingExpense.Value</Value>
                                   <Style>
                                     <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
@@ -4518,7 +4772,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -4548,7 +4802,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -4578,7 +4832,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -4613,7 +4867,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">10</Value>
+                                  <Value>10</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -4643,7 +4897,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Net Income (Before Taxes and Donations)</Value>
+                                  <Value>Net Income (Before Taxes and Donations)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -4675,7 +4929,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!NetIncomeBeforeTaxesandDonations.Value</Value>
+                                  <Value>=Fields!NetIncomeBeforeTaxesandDonations.Value</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00)</Format>
@@ -4713,7 +4967,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -4743,7 +4997,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -4773,7 +5027,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -4808,7 +5062,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">11</Value>
+                                  <Value>11</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -4838,7 +5092,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Taxes (Incomes taxes &amp; Other payable to KRA)</Value>
+                                  <Value>Taxes (Incomes taxes &amp; Other payable to KRA)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -4870,7 +5124,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!Taxes.Value</Value>
+                                  <Value>=Fields!Taxes.Value</Value>
                                   <Style>
                                     <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
@@ -4907,7 +5161,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -4937,7 +5191,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -4967,7 +5221,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -5002,7 +5256,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">12</Value>
+                                  <Value>12</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -5032,7 +5286,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Net Income (After Taxes before Donations)</Value>
+                                  <Value>Net Income (After Taxes before Donations)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -5064,7 +5318,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!NetIncomeAfterTaxesbeforeDonations.Value</Value>
+                                  <Value>=Fields!NetIncomeAfterTaxesbeforeDonations.Value</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00)</Format>
@@ -5102,7 +5356,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">13</Value>
+                                  <Value>13</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -5132,7 +5386,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Donations</Value>
+                                  <Value>Donations</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -5162,7 +5416,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!Donations.Value</Value>
+                                  <Value>=Fields!Donations.Value</Value>
                                   <Style>
                                     <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
@@ -5199,7 +5453,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -5229,7 +5483,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -5259,7 +5513,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -5294,7 +5548,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">14</Value>
+                                  <Value>14</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -5324,7 +5578,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Net Income/(After Taxes and Donations)</Value>
+                                  <Value>Net Income/(After Taxes and Donations)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -5356,7 +5610,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!NetIncomeAfterTaxesandDonations.Value</Value>
+                                  <Value>=Fields!NetIncomeAfterTaxesandDonations.Value</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00)</Format>
@@ -5394,7 +5648,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Note: This return should be received on or before the 15th day of the month following end of every  quarter </Value>
+                                  <Value>Note: This return should be received on or before the 15th day of the month following end of every  quarter </Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -5434,7 +5688,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -5466,7 +5720,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -5498,7 +5752,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -5535,7 +5789,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -5567,7 +5821,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">AUTHORIZATION:</Value>
+                                  <Value>AUTHORIZATION:</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -5599,7 +5853,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -5636,7 +5890,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -5668,7 +5922,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">We declare that this return, to the best of our knowledge and belief is correct.</Value>
+                                  <Value>We declare that this return, to the best of our knowledge and belief is correct.</Value>
                                   <Style>
                                     <FontWeight>Normal</FontWeight>
                                   </Style>
@@ -5707,7 +5961,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -5739,7 +5993,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Agnes Njue ......................Sign...............Agnes„„„„Date„„........„„„....</Value>
+                                  <Value>Agnes Njue ......................Sign...............Agnes„„„„Date„„........„„„....</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -5778,7 +6032,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -5810,7 +6064,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Name of Authorizing Officer</Value>
+                                  <Value>Name of Authorizing Officer</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -5842,7 +6096,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -5879,7 +6133,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -5911,7 +6165,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Hilary Koskey„„„„„..Sign„„„„Hkk„„„„„..Date............................</Value>
+                                  <Value>Hilary Koskey„„„„„..Sign„„„„Hkk„„„„„..Date............................</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -5950,7 +6204,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -5982,7 +6236,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Name of Countersigning Officer</Value>
+                                  <Value>Name of Countersigning Officer</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -6014,7 +6268,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -6268,6 +6522,12 @@
       </Page>
     </ReportSection>
   </ReportSections>
+  <ReportParametersLayout>
+    <GridLayoutDefinition>
+      <NumberOfColumns>4</NumberOfColumns>
+      <NumberOfRows>2</NumberOfRows>
+    </GridLayoutDefinition>
+  </ReportParametersLayout>
   <Code>Public Function BlankZero(ByVal Value As Decimal)
     if Value = 0 then
         Return ""
@@ -6307,257 +6567,4 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Fields>
-        <Field Name="ReportForNavId_1">
-          <DataField>ReportForNavId_1</DataField>
-        </Field>
-        <Field Name="AsAt">
-          <DataField>AsAt</DataField>
-        </Field>
-        <Field Name="Date">
-          <DataField>Date</DataField>
-        </Field>
-        <Field Name="FinancialYear">
-          <DataField>FinancialYear</DataField>
-        </Field>
-        <Field Name="Name">
-          <DataField>Name</DataField>
-        </Field>
-        <Field Name="InterestonLoanPortfolio">
-          <DataField>InterestonLoanPortfolio</DataField>
-        </Field>
-        <Field Name="InterestonLoanPortfolioFormat">
-          <DataField>InterestonLoanPortfolioFormat</DataField>
-        </Field>
-        <Field Name="FeesCommissiononLoanPortfolio">
-          <DataField>FeesCommissiononLoanPortfolio</DataField>
-        </Field>
-        <Field Name="FeesCommissiononLoanPortfolioFormat">
-          <DataField>FeesCommissiononLoanPortfolioFormat</DataField>
-        </Field>
-        <Field Name="GovernmentSecurities">
-          <DataField>GovernmentSecurities</DataField>
-        </Field>
-        <Field Name="GovernmentSecuritiesFormat">
-          <DataField>GovernmentSecuritiesFormat</DataField>
-        </Field>
-        <Field Name="InvestmentinCompaniesshares">
-          <DataField>InvestmentinCompaniesshares</DataField>
-        </Field>
-        <Field Name="InvestmentinCompaniessharesFormat">
-          <DataField>InvestmentinCompaniessharesFormat</DataField>
-        </Field>
-        <Field Name="EquityInvestmentsinsubsidiaries">
-          <DataField>EquityInvestmentsinsubsidiaries</DataField>
-        </Field>
-        <Field Name="EquityInvestmentsinsubsidiariesFormat">
-          <DataField>EquityInvestmentsinsubsidiariesFormat</DataField>
-        </Field>
-        <Field Name="Derivatives">
-          <DataField>Derivatives</DataField>
-        </Field>
-        <Field Name="DerivativesFormat">
-          <DataField>DerivativesFormat</DataField>
-        </Field>
-        <Field Name="CollectiveinvestmentSchemes">
-          <DataField>CollectiveinvestmentSchemes</DataField>
-        </Field>
-        <Field Name="CollectiveinvestmentSchemesFormat">
-          <DataField>CollectiveinvestmentSchemesFormat</DataField>
-        </Field>
-        <Field Name="CommercialPapers">
-          <DataField>CommercialPapers</DataField>
-        </Field>
-        <Field Name="CommercialPapersFormat">
-          <DataField>CommercialPapersFormat</DataField>
-        </Field>
-        <Field Name="PlacementinBanks">
-          <DataField>PlacementinBanks</DataField>
-        </Field>
-        <Field Name="PlacementinBanksFormat">
-          <DataField>PlacementinBanksFormat</DataField>
-        </Field>
-        <Field Name="nterestExpenseonDeposits">
-          <DataField>nterestExpenseonDeposits</DataField>
-        </Field>
-        <Field Name="nterestExpenseonDepositsFormat">
-          <DataField>nterestExpenseonDepositsFormat</DataField>
-        </Field>
-        <Field Name="CostofExternalBorrowings">
-          <DataField>CostofExternalBorrowings</DataField>
-        </Field>
-        <Field Name="CostofExternalBorrowingsFormat">
-          <DataField>CostofExternalBorrowingsFormat</DataField>
-        </Field>
-        <Field Name="DividendExpenses">
-          <DataField>DividendExpenses</DataField>
-        </Field>
-        <Field Name="DividendExpensesFormat">
-          <DataField>DividendExpensesFormat</DataField>
-        </Field>
-        <Field Name="OtherFinancialExpense">
-          <DataField>OtherFinancialExpense</DataField>
-        </Field>
-        <Field Name="OtherFinancialExpenseFormat">
-          <DataField>OtherFinancialExpenseFormat</DataField>
-        </Field>
-        <Field Name="FeesCommissionExpense">
-          <DataField>FeesCommissionExpense</DataField>
-        </Field>
-        <Field Name="FeesCommissionExpenseFormat">
-          <DataField>FeesCommissionExpenseFormat</DataField>
-        </Field>
-        <Field Name="OtherExpense">
-          <DataField>OtherExpense</DataField>
-        </Field>
-        <Field Name="OtherExpenseFormat">
-          <DataField>OtherExpenseFormat</DataField>
-        </Field>
-        <Field Name="ProvisionforLoanLosses">
-          <DataField>ProvisionforLoanLosses</DataField>
-        </Field>
-        <Field Name="ProvisionforLoanLossesFormat">
-          <DataField>ProvisionforLoanLossesFormat</DataField>
-        </Field>
-        <Field Name="ValueofLoansRecovered">
-          <DataField>ValueofLoansRecovered</DataField>
-        </Field>
-        <Field Name="ValueofLoansRecoveredFormat">
-          <DataField>ValueofLoansRecoveredFormat</DataField>
-        </Field>
-        <Field Name="PersonnelExpenses">
-          <DataField>PersonnelExpenses</DataField>
-        </Field>
-        <Field Name="PersonnelExpensesFormat">
-          <DataField>PersonnelExpensesFormat</DataField>
-        </Field>
-        <Field Name="GovernanceExpenses">
-          <DataField>GovernanceExpenses</DataField>
-        </Field>
-        <Field Name="GovernanceExpensesFormat">
-          <DataField>GovernanceExpensesFormat</DataField>
-        </Field>
-        <Field Name="MarketingExpenses">
-          <DataField>MarketingExpenses</DataField>
-        </Field>
-        <Field Name="MarketingExpensesFormat">
-          <DataField>MarketingExpensesFormat</DataField>
-        </Field>
-        <Field Name="DepreciationandAmortizationCharges">
-          <DataField>DepreciationandAmortizationCharges</DataField>
-        </Field>
-        <Field Name="DepreciationandAmortizationChargesFormat">
-          <DataField>DepreciationandAmortizationChargesFormat</DataField>
-        </Field>
-        <Field Name="AdministrativeExpenses">
-          <DataField>AdministrativeExpenses</DataField>
-        </Field>
-        <Field Name="AdministrativeExpensesFormat">
-          <DataField>AdministrativeExpensesFormat</DataField>
-        </Field>
-        <Field Name="NonOperatingIncome">
-          <DataField>NonOperatingIncome</DataField>
-        </Field>
-        <Field Name="NonOperatingIncomeFormat">
-          <DataField>NonOperatingIncomeFormat</DataField>
-        </Field>
-        <Field Name="NonOperatingExpense">
-          <DataField>NonOperatingExpense</DataField>
-        </Field>
-        <Field Name="NonOperatingExpenseFormat">
-          <DataField>NonOperatingExpenseFormat</DataField>
-        </Field>
-        <Field Name="Taxes">
-          <DataField>Taxes</DataField>
-        </Field>
-        <Field Name="TaxesFormat">
-          <DataField>TaxesFormat</DataField>
-        </Field>
-        <Field Name="Donations">
-          <DataField>Donations</DataField>
-        </Field>
-        <Field Name="DonationsFormat">
-          <DataField>DonationsFormat</DataField>
-        </Field>
-        <Field Name="FinancialIncomefromLoansPortfolio">
-          <DataField>FinancialIncomefromLoansPortfolio</DataField>
-        </Field>
-        <Field Name="FinancialIncomefromLoansPortfolioFormat">
-          <DataField>FinancialIncomefromLoansPortfolioFormat</DataField>
-        </Field>
-        <Field Name="FinancialExpense">
-          <DataField>FinancialExpense</DataField>
-        </Field>
-        <Field Name="FinancialExpenseFormat">
-          <DataField>FinancialExpenseFormat</DataField>
-        </Field>
-        <Field Name="NetFinancialIncomeLoss">
-          <DataField>NetFinancialIncomeLoss</DataField>
-        </Field>
-        <Field Name="NetFinancialIncomeLossFormat">
-          <DataField>NetFinancialIncomeLossFormat</DataField>
-        </Field>
-        <Field Name="NetNonOperatingIncomeExpense">
-          <DataField>NetNonOperatingIncomeExpense</DataField>
-        </Field>
-        <Field Name="NetNonOperatingIncomeExpenseFormat">
-          <DataField>NetNonOperatingIncomeExpenseFormat</DataField>
-        </Field>
-        <Field Name="FinancialIncomefromInvestments">
-          <DataField>FinancialIncomefromInvestments</DataField>
-        </Field>
-        <Field Name="FinancialIncomefromInvestmentsFormat">
-          <DataField>FinancialIncomefromInvestmentsFormat</DataField>
-        </Field>
-        <Field Name="AllowanceforLoanLoss">
-          <DataField>AllowanceforLoanLoss</DataField>
-        </Field>
-        <Field Name="AllowanceforLoanLossFormat">
-          <DataField>AllowanceforLoanLossFormat</DataField>
-        </Field>
-        <Field Name="OperatingExpenses">
-          <DataField>OperatingExpenses</DataField>
-        </Field>
-        <Field Name="OperatingExpensesFormat">
-          <DataField>OperatingExpensesFormat</DataField>
-        </Field>
-        <Field Name="NetOperatingIncome">
-          <DataField>NetOperatingIncome</DataField>
-        </Field>
-        <Field Name="NetOperatingIncomeFormat">
-          <DataField>NetOperatingIncomeFormat</DataField>
-        </Field>
-        <Field Name="NetIncomeBeforeTaxesandDonations">
-          <DataField>NetIncomeBeforeTaxesandDonations</DataField>
-        </Field>
-        <Field Name="NetIncomeBeforeTaxesandDonationsFormat">
-          <DataField>NetIncomeBeforeTaxesandDonationsFormat</DataField>
-        </Field>
-        <Field Name="NetIncomeAfterTaxesbeforeDonations">
-          <DataField>NetIncomeAfterTaxesbeforeDonations</DataField>
-        </Field>
-        <Field Name="NetIncomeAfterTaxesbeforeDonationsFormat">
-          <DataField>NetIncomeAfterTaxesbeforeDonationsFormat</DataField>
-        </Field>
-        <Field Name="NetIncomeAfterTaxesandDonations">
-          <DataField>NetIncomeAfterTaxesandDonations</DataField>
-        </Field>
-        <Field Name="NetIncomeAfterTaxesandDonationsFormat">
-          <DataField>NetIncomeAfterTaxesandDonationsFormat</DataField>
-        </Field>
-        <Field Name="FinancialIncome">
-          <DataField>FinancialIncome</DataField>
-        </Field>
-        <Field Name="FinancialIncomeFormat">
-          <DataField>FinancialIncomeFormat</DataField>
-        </Field>
-      </Fields>
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-    </DataSet>
-  </DataSets>
 </Report>

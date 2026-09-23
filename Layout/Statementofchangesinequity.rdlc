@@ -34,13 +34,13 @@
                   <Width>0.3125in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.22917in</Width>
+                  <Width>1.35417in</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>0.30208in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.29861in</Width>
+                  <Width>1.45486in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -324,7 +324,6 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -1204,10 +1203,10 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
+                                  <Value>=Fields!ShareCapital.Value+Fields!StatutoryReserve.Value+Fields!RetainedEarnings.Value</Value>
                                   <Style>
                                     <FontFamily>Times New Roman</FontFamily>
-                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1782,8 +1781,11 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
-                                  <Style />
+                                  <Value>=Fields!Surplus.Value</Value>
+                                  <Style>
+                                    <FontFamily>Cambria</FontFamily>
+                                    <Format>#,0.00;-#,0.00;'-'</Format>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -2057,8 +2059,11 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
-                                  <Style />
+                                  <Value>=Fields!TransfertoStatury.Value+Fields!RTransfertoStatury.Value</Value>
+                                  <Style>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -2327,8 +2332,11 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
-                                  <Style />
+                                  <Value>=Fields!Proposeddividends.Value</Value>
+                                  <Style>
+                                    <FontFamily>Cambria</FontFamily>
+                                    <Format>#,0.00;(#,0.00);'-'</Format>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -2597,8 +2605,11 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
-                                  <Style />
+                                  <Value>=Fields!Honoraria.Value</Value>
+                                  <Style>
+                                    <FontFamily>Cambria</FontFamily>
+                                    <Format>#,0.00;(#,0.00);'-'</Format>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -3115,6 +3126,7 @@
                                   <Style>
                                     <FontFamily>Cambria</FontFamily>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -3130,7 +3142,6 @@
                             </Border>
                             <TopBorder>
                               <Style>Solid</Style>
-                              <Width>1pt</Width>
                             </TopBorder>
                             <BottomBorder>
                               <Style>Double</Style>
@@ -3186,8 +3197,11 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
-                                  <Style />
+                                  <Value>=Fields!ShareCapital.Value+Fields!contShareCapital.Value+Fields!StatutoryReserve.Value+Fields!TransfertoStatury.Value+Fields!RetainedEarnings.Value+Fields!PriorYearAdjustment.Value+Fields!Surplus.Value+Fields!RTransfertoStatury.Value+Fields!Proposeddividends.Value+Fields!Honoraria.Value</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00;(#,0.00);'-'</Format>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -5907,6 +5921,7 @@
                                   <Style>
                                     <FontFamily>Cambria</FontFamily>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -6057,7 +6072,7 @@
             <Top>0.12375in</Top>
             <Left>0.36458in</Left>
             <Height>4.42834in</Height>
-            <Width>9.45486in</Width>
+            <Width>9.73611in</Width>
             <Style>
               <Border>
                 <Style>None</Style>

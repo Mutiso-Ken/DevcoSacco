@@ -138,13 +138,13 @@ Report 50378 "Dividend Processing-Prorated"
                 IF Cust.FIND('-') THEN BEGIN
                     Cust.CALCFIELDS(Cust."Current Shares", Cust."Shares Retained");
                     IF (Cust."Current Shares" <> 0.01) THEN BEGIN
-                        if Cust."Shares Retained" > 0 then begin
+                        if Cust."Shares Retained" <> 0 then begin
                             CDiv := (GenSetUp."Interest on Share Capital(%)" / 100) * ((Cust."Shares Retained"));
                         end else begin
                             CDiv := 0;
                         end;
 
-                        if Cust."Current Shares" > 0 then begin
+                        if Cust."Current Shares" <> 0 then begin
                             CInterest := (GenSetUp."Interest On Current Shares" / 100) * (Cust."Current Shares");
                         end else begin
                             CInterest := 0;
@@ -189,13 +189,13 @@ Report 50378 "Dividend Processing-Prorated"
                     IF (Cust."Current Shares" <> 0.01) THEN BEGIN
 
 
-                        if Cust."Shares Retained" > 0 then begin
+                        if Cust."Shares Retained" <> 0 then begin
                             CDiv := (GenSetUp."Interest on Share Capital(%)" / 100) * ((Cust."Shares Retained"));
                         end else begin
                             CDiv := 0;
                         end;
-                        if Cust."Current Shares" > 0 then begin
-                            CInterest := (GenSetUp."Interest On Current Shares" / 100) * ((Cust."Current Shares") * (11 / 12));
+                        if Cust."Current Shares" <> 0 then begin
+                            CInterest := (GenSetUp."Interest On Current Shares" / 100) * ((Cust."Current Shares") * (12 / 12));
                         end else begin
                             CInterest := 0;
                         end;
@@ -238,13 +238,13 @@ Report 50378 "Dividend Processing-Prorated"
                     Cust.CALCFIELDS(Cust."Current Shares", Cust."Shares Retained");
                     IF (Cust."Current Shares" <> 0.01) THEN BEGIN
 
-                        if Cust."Shares Retained" > 0 then begin
+                        if Cust."Shares Retained" <> 0 then begin
                             CDiv := (GenSetUp."Interest on Share Capital(%)" / 100) * ((Cust."Shares Retained"));
                         end else begin
                             CDiv := 0;
                         end;
-                        if Cust."Current Shares" > 0 then begin
-                            CInterest := (GenSetUp."Interest On Current Shares" / 100) * ((Cust."Current Shares") * (10 / 12));
+                        if Cust."Current Shares" <> 0 then begin
+                            CInterest := (GenSetUp."Interest On Current Shares" / 100) * ((Cust."Current Shares") * (11 / 12));
                         end else begin
                             CInterest := 0;
                         end;
@@ -273,7 +273,7 @@ Report 50378 "Dividend Processing-Prorated"
                     END;
                 END;
 
-                //4th Month
+                //4th Month march
                 FromDate := CALCDATE('2M', "From Date");
                 ToDate := CALCDATE('-1D', CALCDATE('3M', "From Date"));
                 EVALUATE(FromDateS, FORMAT(FromDate));
@@ -288,13 +288,13 @@ Report 50378 "Dividend Processing-Prorated"
                     Cust.CALCFIELDS(Cust."Current Shares", Cust."Shares Retained");
                     IF (Cust."Current Shares" <> 0.01) THEN BEGIN
 
-                        if Cust."Shares Retained" > 0 then begin
+                        if Cust."Shares Retained" <> 0 then begin
                             CDiv := (GenSetUp."Interest on Share Capital(%)" / 100) * ((Cust."Shares Retained"));
                         end else begin
                             CDiv := 0;
                         end;
-                        if Cust."Current Shares" > 0 then begin
-                            CInterest := (GenSetUp."Interest On Current Shares" / 100) * ((Cust."Current Shares") * (9 / 12));
+                        if Cust."Current Shares" <> 0 then begin
+                            CInterest := (GenSetUp."Interest On Current Shares" / 100) * ((Cust."Current Shares") * (10 / 12));
                         end else begin
                             CInterest := 0;
                         end;
@@ -324,7 +324,7 @@ Report 50378 "Dividend Processing-Prorated"
                     END;
                 END;
 
-                //5th Month
+                //5th Month april
                 FromDate := CALCDATE('3M', "From Date");
                 ToDate := CALCDATE('-1D', CALCDATE('4M', "From Date"));
                 EVALUATE(FromDateS, FORMAT(FromDate));
@@ -339,13 +339,13 @@ Report 50378 "Dividend Processing-Prorated"
                     Cust.CALCFIELDS(Cust."Current Shares", Cust."Shares Retained");
                     IF (Cust."Current Shares" <> 0.01) THEN BEGIN
 
-                        if Cust."Shares Retained" > 0 then begin
+                        if Cust."Shares Retained" <> 0 then begin
                             CDiv := (GenSetUp."Interest on Share Capital(%)" / 100) * ((Cust."Shares Retained"));
                         end else begin
                             CDiv := 0;
                         end;
-                        if Cust."Current Shares" > 0 then begin
-                            CInterest := (GenSetUp."Interest On Current Shares" / 100) * ((Cust."Current Shares") * (8 / 12));
+                        if Cust."Current Shares" <> 0 then begin
+                            CInterest := (GenSetUp."Interest On Current Shares" / 100) * ((Cust."Current Shares") * (9 / 12));
                         end else begin
                             CInterest := 0;
                         end;
@@ -372,7 +372,7 @@ Report 50378 "Dividend Processing-Prorated"
                     END;
                 END;
 
-                //6th Month
+                //6th Month May
                 FromDate := CALCDATE('4M', "From Date");
                 ToDate := CALCDATE('-1D', CALCDATE('5M', "From Date"));
                 EVALUATE(FromDateS, FORMAT(FromDate));
@@ -387,13 +387,13 @@ Report 50378 "Dividend Processing-Prorated"
                     Cust.CALCFIELDS(Cust."Current Shares", Cust."Shares Retained");
                     IF (Cust."Current Shares" <> 0.01) THEN BEGIN
 
-                        if Cust."Shares Retained" > 0 then begin
+                        if Cust."Shares Retained" <> 0 then begin
                             CDiv := (GenSetUp."Interest on Share Capital(%)" / 100) * ((Cust."Shares Retained"));
                         end else begin
                             CDiv := 0;
                         end;
-                        if Cust."Current Shares" > 0 then begin
-                            CInterest := (GenSetUp."Interest On Current Shares" / 100) * ((Cust."Current Shares") * (7 / 12));
+                        if Cust."Current Shares" <> 0 then begin
+                            CInterest := (GenSetUp."Interest On Current Shares" / 100) * ((Cust."Current Shares") * (8 / 12));
                         end else begin
                             CInterest := 0;
                         end;
@@ -420,7 +420,7 @@ Report 50378 "Dividend Processing-Prorated"
                     END;
                 END;
 
-                //7th Month
+                //7th Month june
                 FromDate := CALCDATE('5M', "From Date");
                 ToDate := CALCDATE('-1D', CALCDATE('6M', "From Date"));
                 EVALUATE(FromDateS, FORMAT(FromDate));
@@ -434,14 +434,14 @@ Report 50378 "Dividend Processing-Prorated"
                 IF Cust.FIND('-') THEN BEGIN
                     Cust.CALCFIELDS(Cust."Current Shares", Cust."Shares Retained");
                     IF (Cust."Current Shares" <> 0.01) THEN BEGIN
-                        if Cust."Shares Retained" > 0 then begin
+                        if Cust."Shares Retained" <> 0 then begin
                             CDiv := (GenSetUp."Interest on Share Capital(%)" / 100) * ((Cust."Shares Retained"));
                         end else begin
                             CDiv := 0;
                         end;
 
-                        if Cust."Current Shares" > 0 then begin
-                            CInterest := (GenSetUp."Interest On Current Shares" / 100) * ((Cust."Current Shares") * (6 / 12));
+                        if Cust."Current Shares" <> 0 then begin
+                            CInterest := (GenSetUp."Interest On Current Shares" / 100) * ((Cust."Current Shares") * (7 / 12));
                         end else begin
                             CInterest := 0;
                         end;
@@ -469,7 +469,7 @@ Report 50378 "Dividend Processing-Prorated"
                     END;
                 END;
 
-                //8th Month
+                //8th Month july 
                 FromDate := CALCDATE('6M', "From Date");
                 ToDate := CALCDATE('-1D', CALCDATE('7M', "From Date"));
                 EVALUATE(FromDateS, FORMAT(FromDate));
@@ -484,13 +484,13 @@ Report 50378 "Dividend Processing-Prorated"
                     Cust.CALCFIELDS(Cust."Current Shares", Cust."Shares Retained");
                     IF (Cust."Current Shares" <> 0.01) THEN BEGIN
 
-                        if Cust."Shares Retained" > 0 then begin
+                        if Cust."Shares Retained" <> 0 then begin
                             CDiv := (GenSetUp."Interest on Share Capital(%)" / 100) * ((Cust."Shares Retained"));
                         end else begin
                             CDiv := 0;
                         end;
-                        if Cust."Current Shares" > 0 then begin
-                            CInterest := (GenSetUp."Interest On Current Shares" / 100) * ((Cust."Current Shares") * (5 / 12));
+                        if Cust."Current Shares" <> 0 then begin
+                            CInterest := (GenSetUp."Interest On Current Shares" / 100) * ((Cust."Current Shares") * (6 / 12));
                         end else begin
                             CInterest := 0;
                         end;
@@ -517,7 +517,7 @@ Report 50378 "Dividend Processing-Prorated"
                     END;
                 END;
 
-                //9th Month
+                //9th Month Aug
                 FromDate := CALCDATE('7M', "From Date");
                 ToDate := CALCDATE('-1D', CALCDATE('8M', "From Date"));
                 EVALUATE(FromDateS, FORMAT(FromDate));
@@ -532,13 +532,13 @@ Report 50378 "Dividend Processing-Prorated"
                     Cust.CALCFIELDS(Cust."Current Shares", Cust."Shares Retained");
                     IF (Cust."Current Shares" <> 0.01) THEN BEGIN
 
-                        if Cust."Shares Retained" > 0 then begin
+                        if Cust."Shares Retained" <> 0 then begin
                             CDiv := (GenSetUp."Interest on Share Capital(%)" / 100) * ((Cust."Shares Retained"));
                         end else begin
                             CDiv := 0;
                         end;
-                        if Cust."Current Shares" > 0 then begin
-                            CInterest := (GenSetUp."Interest On Current Shares" / 100) * ((Cust."Current Shares") * (4 / 12));
+                        if Cust."Current Shares" <> 0 then begin
+                            CInterest := (GenSetUp."Interest On Current Shares" / 100) * ((Cust."Current Shares") * (5 / 12));
                         end else begin
                             CInterest := 0;
                         end;
@@ -566,7 +566,7 @@ Report 50378 "Dividend Processing-Prorated"
                     END;
                 END;
 
-                //10th Month
+                //10th Month sep
                 FromDate := CALCDATE('8M', "From Date");
                 ToDate := CALCDATE('-1D', CALCDATE('9M', "From Date"));
                 EVALUATE(FromDateS, FORMAT(FromDate));
@@ -582,13 +582,13 @@ Report 50378 "Dividend Processing-Prorated"
                     IF (Cust."Current Shares" <> 0.01) THEN BEGIN
 
 
-                        if Cust."Shares Retained" > 0 then begin
+                        if Cust."Shares Retained" <> 0 then begin
                             CDiv := (GenSetUp."Interest on Share Capital(%)" / 100) * ((Cust."Shares Retained"));
                         end else begin
                             CDiv := 0;
                         end;
-                        if Cust."Current Shares" > 0 then begin
-                            CInterest := (GenSetUp."Interest On Current Shares" / 100) * ((Cust."Current Shares") * (3 / 12));
+                        if Cust."Current Shares" <> 0 then begin
+                            CInterest := (GenSetUp."Interest On Current Shares" / 100) * ((Cust."Current Shares") * (4 / 12));
                         end else begin
                             CInterest := 0;
                         end;
@@ -615,7 +615,7 @@ Report 50378 "Dividend Processing-Prorated"
                     END;
                 END;
 
-                //11th Month
+                //11th Month  Oct
                 FromDate := CALCDATE('9M', "From Date");
                 ToDate := CALCDATE('-1D', CALCDATE('10M', "From Date"));
                 EVALUATE(FromDateS, FORMAT(FromDate));
@@ -631,13 +631,13 @@ Report 50378 "Dividend Processing-Prorated"
                     IF (Cust."Current Shares" <> 0.01) THEN BEGIN
 
 
-                        if Cust."Shares Retained" > 0 then begin
+                        if Cust."Shares Retained" <> 0 then begin
                             CDiv := (GenSetUp."Interest on Share Capital(%)" / 100) * ((Cust."Shares Retained"));
                         end else begin
                             CDiv := 0;
                         end;
-                        if Cust."Current Shares" > 0 then begin
-                            CInterest := (GenSetUp."Interest On Current Shares" / 100) * ((Cust."Current Shares") * (2 / 12));
+                        if Cust."Current Shares" <> 0 then begin
+                            CInterest := (GenSetUp."Interest On Current Shares" / 100) * ((Cust."Current Shares") * (3 / 12));
                         end else begin
                             CInterest := 0;
                         end;
@@ -666,7 +666,7 @@ Report 50378 "Dividend Processing-Prorated"
                 END;
 
 
-                //12th Month
+                //12th Month Nov
                 FromDate := CALCDATE('10M', "From Date");
                 ToDate := CALCDATE('-1D', CALCDATE('11M', "From Date"));
                 EVALUATE(FromDateS, FORMAT(FromDate));
@@ -680,12 +680,61 @@ Report 50378 "Dividend Processing-Prorated"
                 IF Cust.FIND('-') THEN BEGIN
                     Cust.CALCFIELDS(Cust."Current Shares", Cust."Shares Retained");
                     IF (Cust."Current Shares" <> 0.01) THEN BEGIN
-                        if Cust."Current Shares" > 0 then begin
+                        if Cust."Current Shares" <> 0 then begin
                             CInterest := (GenSetUp."Interest On Current Shares" / 100) * ((Cust."Current Shares") * (2 / 12));
                         end else begin
                             CInterest := 0;
                         end;
-                        if Cust."Shares Retained" > 0 then begin
+                        if Cust."Shares Retained" <> 0 then begin
+                            CDiv := (GenSetUp."Interest on Share Capital(%)" / 100) * ((Cust."Shares Retained"));
+                        end else begin
+                            CDiv := 0;
+                        end;
+
+                        IntOnDeposits := IntOnDeposits + CInterest;
+                        DividendsOnshareCapital := DividendsOnshareCapital + CDiv;
+                        DivTotal := DivTotal + (CDiv + CInterest);
+                        WtaX := (CDiv + CInterest) * (GenSetUp."Withholding Tax (%)" / 100);
+                        WthTAxTotal := WthTAxTotal + WtaX;
+                        DivProg.INIT;
+                        DivProg."Member No" := Customer."No.";
+                        DivProg.Date := ToDate;
+                        DivProg."Gross Dividends" := DivTotal;
+
+                        DivProg."Gross Interest On Deposit" := CInterest;
+                        DivProg."Gross Interest On Sharecapital" := CDiv;
+                        DivProg."Qualifying Share Capital" := Cust."Shares Retained";
+                        DivProg."Witholding Tax" := WthTAxTotal;
+
+                        DivProg."Net Dividends" := DivTotal - WthTAxTotal;
+                        DivProg."Qualifying Shares" := Cust."Current Shares";
+                        DivProg.Shares := Cust."Current Shares";
+                        DivProg."Share Capital" := Cust."Shares Retained";
+                        DivProg.INSERT;
+
+                    END;
+                END;
+
+                //13th Month Nov
+                FromDate := CALCDATE('11M', "From Date");
+                ToDate := CALCDATE('-1D', CALCDATE('12M', "From Date"));
+                EVALUATE(FromDateS, FORMAT(FromDate));
+                EVALUATE(ToDateS, FORMAT(ToDate));
+
+                DateFilter := FromDateS + '..' + ToDateS;
+                Cust.RESET;
+                Cust.SETCURRENTKEY("No.");
+                Cust.SETRANGE(Cust."No.", Customer."No.");
+                Cust.SETFILTER(Cust."Date Filter", DateFilter);
+                IF Cust.FIND('-') THEN BEGIN
+                    Cust.CALCFIELDS(Cust."Current Shares", Cust."Shares Retained");
+                    IF (Cust."Current Shares" <> 0.01) THEN BEGIN
+                        if Cust."Current Shares" <> 0 then begin
+                            CInterest := (GenSetUp."Interest On Current Shares" / 100) * ((Cust."Current Shares") * (1 / 12));
+                        end else begin
+                            CInterest := 0;
+                        end;
+                        if Cust."Shares Retained" <> 0 then begin
                             CDiv := (GenSetUp."Interest on Share Capital(%)" / 100) * ((Cust."Shares Retained"));
                         end else begin
                             CDiv := 0;
@@ -721,39 +770,55 @@ Report 50378 "Dividend Processing-Prorated"
                 Customer."Dividend Processed Date" := "From Date";
                 Customer.MODIFY;
 
-                // DivProg.RESET;
-                // DivProg.SETRANGE(DivProg."Member No", "No.");
-                // IF DivProg.FIND('-') THEN BEGIN
-                //     REPEAT
-                //         "W/Tax" += DivProg."Witholding Tax";
-                //         CommDiv += DivProg.Shares;
-                //     UNTIL DivProg.NEXT = 0;
-                // END;
+                DivShares := 0;
+                intOnDeposit := 0;
+                DivProg.RESET;
+                DivProg.SETRANGE(DivProg."Member No", "No.");
+                IF DivProg.FIND('-') THEN BEGIN
+                    REPEAT
+                        "W/Tax" += DivProg."Witholding Tax";
+                        CommDiv += DivProg.Shares;
+                        DivShares += DivProg."Gross Interest On Sharecapital";
+                        intOnDeposit += DivProg."Gross Interest On Deposit";
+                    UNTIL DivProg.NEXT = 0;
+                END;
+
 
                 DivTotal := Round((DivTotal), 1, '<');
 
                 //IF (DivTotal > 0) and (Customer.Blocked = Customer.Blocked::" ") THEN BEGIN
-                IF (DivTotal > 0) then begin
+                //IF (DivTotal > 0) then begin
+                IF (DivShares > 0) then begin
                     ObjGensetup.GET();
                     //------------------------------------1. CREDIT MEMBER DIVIDEND A/C_Gross Dividend+Interest on Deposits---------------------------------------
 
                     LineNo := LineNo + 10000;
                     SFactory.FnCreateGnlJournalLineBalanced(BATCH_TEMPLATE, BATCH_NAME, DOCUMENT_NO, LineNo, GenJournalLine."Transaction Type"::Dividend,
-                    GenJournalLine."Account Type"::Customer, "No.", PostingDate, DivTotal * -1, 'BOSA', '',
-                    'Gross Dividend+Interest on Deposits- ' + FORMAT(PostingDate), '', GenJournalLine."Account Type"::"G/L Account", ObjGensetup."Dividend Payable Account");
+                    GenJournalLine."Account Type"::Customer, "No.", PostingDate, DivShares * -1, 'BOSA', '',
+                    'Gross Dividend- ' + FORMAT(PostingDate), '', GenJournalLine."Account Type"::"G/L Account", ObjGensetup."Dividend Payable Account");
 
+                    LineNo := LineNo + 10000;
+                    SFactory.FnCreateGnlJournalLineBalanced(BATCH_TEMPLATE, BATCH_NAME, DOCUMENT_NO, LineNo, GenJournalLine."Transaction Type"::Dividend,
+                    GenJournalLine."Account Type"::Customer, "No.", PostingDate, Round((DivShares * (ObjGensetup."Withholding Tax (%)" / 100)), 0.01, '<'), 'BOSA', '',
+                    'Witholding Tax on Dividend- ' + FORMAT(PostingDate), '', GenJournalLine."Account Type"::"G/L Account", ObjGensetup."WithHolding Tax Account");
 
-                    // LineNo := LineNo + 10000;
-                    // SFactory.FnCreateGnlJournalLine(BATCH_TEMPLATE, BATCH_NAME, DOCUMENT_NO, LineNo, GenJournalLine."Transaction Type"::Dividend,
-                    // GenJournalLine."Account Type"::Customer, "No.", PostingDate, DivTotal * -1, 'BOSA', '',
-                    // 'Gross Dividend+Interest on Deposits- ' + FORMAT(PostingDate), '');
+                end;
+
+                IF (intOnDeposit > 0) then begin
+                    ObjGensetup.GET();
+
+                    LineNo := LineNo + 10000;
+                    SFactory.FnCreateGnlJournalLineBalanced(BATCH_TEMPLATE, BATCH_NAME, DOCUMENT_NO, LineNo, GenJournalLine."Transaction Type"::Dividend,
+                    GenJournalLine."Account Type"::Customer, "No.", PostingDate, intOnDeposit * -1, 'BOSA', '',
+                    'Interest on Deposits-- ' + FORMAT(PostingDate), '', GenJournalLine."Account Type"::"G/L Account", ObjGensetup."Dividend Payable Account");
                     // //--------------------------------(CREDIT MEMBER DIVIDEND A/C_Gross Dividend+Interest on Deposits)---------------------------------------------
 
                     // //------------------------------------1.1 DEBIT DIVIVIDEND PAYABLE GL A/C-----------------------------------------------------------------------
-                    // LineNo := LineNo + 10000;
-                    // SFactory.FnCreateGnlJournalLine(BATCH_TEMPLATE, BATCH_NAME, DOCUMENT_NO, LineNo, GenJournalLine."Transaction Type"::" ",
-                    // GenJournalLine."Account Type"::"G/L Account", ObjGensetup."Dividend Payable Account", PostingDate, DivTotal, 'BOSA', '',
-                    // 'Gross Dividend+Interest on Deposits- ' + FORMAT(PostingDate), '');
+                    LineNo := LineNo + 10000;
+                    SFactory.FnCreateGnlJournalLineBalanced(BATCH_TEMPLATE, BATCH_NAME, DOCUMENT_NO, LineNo, GenJournalLine."Transaction Type"::Dividend,
+                    GenJournalLine."Account Type"::Customer, "No.", PostingDate, Round((intOnDeposit * (ObjGensetup."Withholding Tax (%)" / 100)), 0.01, '<'), 'BOSA', '',
+                    'Witholding Tax on Interest on Deposits- ' + FORMAT(PostingDate), '', GenJournalLine."Account Type"::"G/L Account", ObjGensetup."WithHolding Tax Account");
+
                     // //----------------------------------(Debit Dividend Payable GL A/C)----------------------------------------------------------------------------
 
                     //------------------------------------2. DEBIT MEMBER DIVIDEND A/C_GROSS WITHHOLDING TAX-------------------------------------------------------
@@ -762,10 +827,10 @@ Report 50378 "Dividend Processing-Prorated"
                     // GenJournalLine."Account Type"::Customer, "No.", PostingDate, Round((DivTotal * (ObjGensetup."Withholding Tax (%)" / 100)), 1, '<'), 'BOSA', '',
                     // 'Witholding Tax on Dividend- ' + FORMAT(PostingDate), '');
 
-                    LineNo := LineNo + 10000;
-                    SFactory.FnCreateGnlJournalLineBalanced(BATCH_TEMPLATE, BATCH_NAME, DOCUMENT_NO, LineNo, GenJournalLine."Transaction Type"::Dividend,
-                    GenJournalLine."Account Type"::Customer, "No.", PostingDate, Round((DivTotal * (ObjGensetup."Withholding Tax (%)" / 100)), 1, '<'), 'BOSA', '',
-                    'Witholding Tax on Dividend- ' + FORMAT(PostingDate), '', GenJournalLine."Account Type"::"G/L Account", ObjGensetup."WithHolding Tax Account");
+                    // LineNo := LineNo + 10000; //mk
+                    // SFactory.FnCreateGnlJournalLineBalanced(BATCH_TEMPLATE, BATCH_NAME, DOCUMENT_NO, LineNo, GenJournalLine."Transaction Type"::Dividend,
+                    // GenJournalLine."Account Type"::Customer, "No.", PostingDate, Round((DivTotal * (ObjGensetup."Withholding Tax (%)" / 100)), 1, '<'), 'BOSA', '',
+                    // 'Witholding Tax on Dividend- ' + FORMAT(PostingDate), '', GenJournalLine."Account Type"::"G/L Account", ObjGensetup."WithHolding Tax Account");
                     //--------------------------------(Debit Member Dividend A/C_Gross Witholding Tax)-------------------------------------------------------------
 
                     //------------------------------------2.1. CREDIT WITHHOLDING TAX GL A/C-----------------------------------------------------------------------
@@ -802,17 +867,17 @@ Report 50378 "Dividend Processing-Prorated"
                     // GenJournalLine."Account Type"::"G/L Account", ObjGensetup."Excise Duty Account", PostingDate, round(((ObjGensetup."Dividend Processing Fee" * (ObjGensetup."Excise Duty(%)" / 100)) * -1), 1, '<'), 'BOSA', '',
                     // 'Excise Duty- ' + FORMAT(PostingDate), '');
                     // //----------------------------------(Credit Excise Duty gl a/c)----------------------------------------------------------------------
-
-
-                    TotalPay := DivTotal - WthTAxTotal;
-
-                    // GenJournalLine.Reset;
-                    // GenJournalLine.SetRange("Journal Template Name", BATCH_TEMPLATE);
-                    // GenJournalLine.SetRange("Journal Batch Name", BATCH_NAME);
-                    // if GenJournalLine.Find('-') then
-                    //     Page.Run(page::"General Journal", GenJournalLine);
-
                 END;
+
+                TotalPay := DivTotal - WthTAxTotal;
+
+                // GenJournalLine.Reset;
+                // GenJournalLine.SetRange("Journal Template Name", BATCH_TEMPLATE);
+                // GenJournalLine.SetRange("Journal Batch Name", BATCH_NAME);
+                // if GenJournalLine.Find('-') then
+                //     Page.Run(page::"General Journal", GenJournalLine);
+
+                //END;
             end;
 
             trigger OnPostDataItem()
@@ -932,7 +997,9 @@ Report 50378 "Dividend Processing-Prorated"
         Oct: Decimal;
         Nov: Decimal;
         Dec: Decimal;
-
+        MemberLedgerEntry: Record "Cust. Ledger Entry";
+        DivShares: Decimal;
+        intOnDeposit: Decimal;
 
 
 

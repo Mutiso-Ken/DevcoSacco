@@ -74,10 +74,15 @@ Report 50025 "State of financial Position"
             {
 
             }
+            column(CurrentHonoraria; CurrentHonoraria)
+            {
+
+            }
             column(EndofLastyear; EndofLastyear) { }
             column(CommercialPapers; CommercialPapers)
             {
             }
+            column(CurrentYearDividends; CurrentYearDividends) { }
             column(CollectiveInvestment; CollectiveInvestment)
             {
             }
@@ -115,7 +120,7 @@ Report 50025 "State of financial Position"
             column(LTaxPayable; LTaxPayable)
             {
             }
-            column(TradeandOtherPayables; TradeandOtherPayables)
+            column(TradeandOtherPayables; CurrentPayables)
             {
             }
             column(LTradeandOtherPayables; LTradeandOtherPayables)
@@ -609,6 +614,7 @@ Report 50025 "State of financial Position"
                         end;
                     until GLAccount.Next = 0;
                 end;
+
                 LInterestonMemberdeposits := 0;
                 GLAccount.Reset;
                 GLAccount.SetFilter(GLAccount.MkopoLiabilities, '%1', GLAccount.MkopoLiabilities::dividendsandInterestPayable);
@@ -640,6 +646,10 @@ Report 50025 "State of financial Position"
                         end;
                     until GLAccount.Next = 0;
                 end;
+                CurrentPayables := 0;
+                CurrentPayables := TradeandOtherPayables + InterestonMemberdeposits;
+
+
                 LTradeandOtherPayables := 0;
                 GLAccount.Reset;
                 GLAccount.SetFilter(GLAccount.MkopoLiabilities, '%1', GLAccount.MkopoLiabilities::TradeandotherPayables);
@@ -751,6 +761,35 @@ Report 50025 "State of financial Position"
                     until GLAccount.Next = 0;
                 end;
                 //Statutory
+                InvestmentIncome := 0;
+                GLAccount.Reset;
+                GLAccount.SetFilter(GLAccount."Form2F(Statement of C Income)", '%1', GLAccount."form2f(statement of c income)"::InvestmentinCompaniesshares);
+                if GLAccount.FindSet then begin
+                    repeat
+                        GLEntry.Reset;
+                        GLEntry.SetRange(GLEntry."G/L Account No.", GLAccount."No.");
+                        GLEntry.SetFilter(GLEntry."Posting Date", '..%1', EndofLastyear);
+                        if GLEntry.FindSet then begin
+                            GLEntry.CalcSums(Amount);
+                            InvestmentIncome += -1 * GLEntry.Amount;
+                        end;
+                    until GLAccount.Next = 0;
+                end;
+
+                LInvestmentIncome := 0;
+                GLAccount.Reset;
+                GLAccount.SetFilter(GLAccount."Form2F(Statement of C Income)", '%1', GLAccount."form2f(statement of c income)"::InvestmentinCompaniesshares);
+                if GLAccount.FindSet then begin
+                    repeat
+                        GLEntry.Reset;
+                        GLEntry.SetRange(GLEntry."G/L Account No.", GLAccount."No.");
+                        GLEntry.SetFilter(GLEntry."Posting Date", '..%1', LastYearButOne);
+                        if GLEntry.FindSet then begin
+                            GLEntry.CalcSums(Amount);
+                            LInvestmentIncome += -1 * GLEntry.Amount;
+                        end;
+                    until GLAccount.Next = 0;
+                end;
 
                 //RevenueReserves
                 RevenueReservers := 0;
@@ -814,15 +853,6 @@ Report 50025 "State of financial Position"
                 end;
                 //Endofsharecapital
 
-                //End of Financed By
-                TotalLiabilities := 0;
-                LTotalLiabilities := 0;
-
-                TotalLiabilities := TradeandOtherPayables + Nonwithdrawabledeposits + InterestonMemberdeposits + Hononaria + TaxPayable;
-                LTotalLiabilities := LTradeandOtherPayables + LNonwithdrawabledeposits + LInterestonMemberdeposits + LHononaria + LTaxPayable;
-
-
-
 
 
                 //Suplus
@@ -846,20 +876,17 @@ Report 50025 "State of financial Position"
                     until GLAccount.Next = 0;
                 end;
 
-                // LIncomes := 0;
-                // GLAccount.Reset;
-                // GLAccount.SetFilter(GLAccount.Financials, '%1', GLAccount.Financials::Revenue);
-                // if GLAccount.FindSet then begin
-                //     repeat
-                //         GLEntry.Reset;
-                //         GLEntry.SetRange(GLEntry."G/L Account No.", GLAccount."No.");
-                //         GLEntry.SetFilter(GLEntry."Posting Date", '<=%1', LastYearButOne);
-                //         if GLEntry.FindSet then begin
-                //             GLEntry.CalcSums(Amount);
-                //             LIncomes += -1 * GLEntry.Amount;
-                //         end;
-                //     until GLAccount.Next = 0;
-                // end;
+                Depositsonly := 0;
+                Depositsonly := 0;
+                GLAccount.Reset;
+                GLAccount.SetRange(GLAccount."No.", '15301');
+                GLAccount.SetFilter(GLAccount."Date Filter", '<=%1', Asat);
+                if GLAccount.FindSet then begin
+                    GLAccount.CalcFields(GLAccount."Net Change");
+                    Depositsonly := -1 * (Depositsonly + GLAccount."Net Change");
+                end;
+
+
                 //Expense
                 Expenses := 0;
                 GLAccount.Reset;
@@ -890,17 +917,31 @@ Report 50025 "State of financial Position"
                 //         end;
                 //     until GLAccount.Next = 0;
                 // end;
-                Surplus := 0;
-                Surplus := Incomes + Expenses;
-                //LSurplus := LIncomes - LExpenses;
+
+
+
+                //current year surplus
+                surplus := 0;
+                GLAccount.Reset;
+                GLAccount.SetRange(GLAccount."No.", '20800');
+                GLAccount.SetFilter(GLAccount."Date Filter", '<=%1', Asat);
+                if GLAccount.FindSet then begin
+                    GLAccount.CalcFields(GLAccount."Net Change");
+                    surplus := surplus + GLAccount."Net Change";
+                end;
+                surplus := Surplus * -1;
+                CurrentYearDividends := 0;
+                CurrentHonoraria := 0;
+                Dividends := 0;
+                InterestOndeposits := 0;
+                SaccoGen.Get();
+
 
                 //End Of Expense
-                RevenueReservers := RevenueReservers + Surplus;
-
-
-
+                RevenueReservers := RevenueReservers + Surplus - (StatutoryAdjustment + CurrentHonoraria + Dividends);
                 TotalEquity := 0;
                 LTotalEquity := 0;
+
 
                 TotalEquity := StatutoryReserve + RevenueReservers + ShareCapital;
                 LTotalEquity := LStatutoryReserve + LRevenueReservers + LShareCapital;
@@ -909,12 +950,13 @@ Report 50025 "State of financial Position"
                 TotalLiabilitiesandEquity := 0;
                 LTotalLiabilitiesandEquity := 0;
 
+                TotalLiabilities := CurrentPayables + Nonwithdrawabledeposits + TaxPayable + InterestonMemberdeposits + Hononaria;
+                LTotalLiabilities := LTradeandOtherPayables + LNonwithdrawabledeposits + LTaxPayable + LInterestonMemberDeposits + LHononaria;
+
+
                 TotalLiabilitiesandEquity := TotalEquity + TotalLiabilities;
                 LTotalLiabilitiesandEquity := LTotalEquity + LTotalLiabilities;
                 //End of Suplus
-
-
-                //MESSAGE(FORMAT(CurrentYearSurplus));
 
                 CashCashEquivalent := Cashatbank + Cashinhand;
                 LCashCashEquivalent := LCashatbank + LCashinhand;
@@ -930,9 +972,6 @@ Report 50025 "State of financial Position"
                 EQUITY := ShareCapital + CapitalGrants;
                 RetainedEarnings := PrioryarRetainedEarnings - CurrentYearSurplus;
                 OtherEquityAccounts := StatutoryReserve + OtherReserves + RevaluationReserves + AdjustmenttoEquity + ProposedDividends;
-
-
-                TotalLiabilitiesandEquity := TotalEquity + TotalLiabilities;
             end;
 
             trigger OnPreDataItem()
@@ -970,6 +1009,19 @@ Report 50025 "State of financial Position"
     }
 
     var
+        Revenuefortheyear: Decimal;
+        Depositsonly: Decimal;
+        InvestmentIncome: Decimal;
+        LInvestmentIncome: Decimal;
+        ProposedtaxExpense: Decimal;
+        Netincometax: Decimal;
+        StatutoryAdjustment: Decimal;
+        CurrentHonoraria: Decimal;
+        CurrentPayables: Decimal;
+        Dividends: Decimal;
+        SaccoGen: Record "Sacco General Set-Up";
+        InterestOndeposits: Decimal;
+        CurrentYearDividends: Decimal;
         ProvisionLoanLoss: Decimal;
         LProvisionLoanLoss: Decimal;
         StatutoryReserves: Decimal;
@@ -1084,4 +1136,3 @@ Report 50025 "State of financial Position"
         TotalAssets: Decimal;
         LTotalAssets: Decimal;
 }
-
